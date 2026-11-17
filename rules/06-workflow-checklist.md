@@ -26,6 +26,7 @@
 
 - [ ] Ran `legacy-scan` (or equivalent check) if refactoring existing code.
 - [ ] Ran the agent-skills `review` (`/review`) + `test` (`/test`) workflow where applicable.
+- [ ] Passed the 20-check security gate per [11-security-checklist.md](11-security-checklist.md) (headers, .git 404, RLS, server-side prices, rate limits, redirects, no prod maps…).
 - [ ] Searched the diff: every new import is allowlisted or pre-existing.
 - [ ] Typecheck / lint / build passes (project's own commands).
 - [ ] Response states: tools used + discovery commands + citations.

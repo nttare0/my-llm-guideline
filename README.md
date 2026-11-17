@@ -32,6 +32,7 @@ rules/
   08-site-essentials.md            ← required site essentials: favicon, privacy, terms, sitemap, share preview
   09-real-images.md                ← real images only — Unsplash & Pinterest, never AI-generated
   10-prebuild-plugins.md           ← pre-build plugins: Ponytail + Agent Skills install gate
+  11-security-checklist.md         ← security gate: 20 checks required before shipping
 ```
 
 ## How to use these rules
@@ -65,4 +66,4 @@ See [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md). In short:
 
 ---
 
-*Version 1.4 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only) · Plugins: Ponytail, Agent Skills.*
+*Version 1.5 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only) · Plugins: Ponytail, Agent Skills · Security: 20-check ship gate.*
