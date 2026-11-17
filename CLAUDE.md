@@ -12,6 +12,7 @@
 - **Stop instead of guessing:** if the allowlist can't do it, ask the user.
 - **No signatures or trailers:** never append `Co-Authored-By:`, AI labels, or bot tags to code, comments, commit messages, or PR descriptions. Clean output only.
 - **Site essentials:** every build ships favicon, privacy policy, terms & conditions, sitemap, and share preview (OG metadata) — see [rules/08-site-essentials.md](rules/08-site-essentials.md).
+- **Real images only:** use real images from Unsplash and Pinterest — never AI-generated, never fabricated URLs — see [rules/09-real-images.md](rules/09-real-images.md).
 
 ## Full Rules
 

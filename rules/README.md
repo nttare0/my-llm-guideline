@@ -17,6 +17,7 @@ rewriting the whole guideline.
 | 06 | [06-workflow-checklist.md](06-workflow-checklist.md) | Before / during / after workflow + self-check |
 | 07 | [07-how-to-add-a-rule.md](07-how-to-add-a-rule.md) | Template + steps for adding the next rule |
 | 08 | [08-site-essentials.md](08-site-essentials.md) | Site essentials: favicon, privacy, terms, sitemap, share preview |
+| 09 | [09-real-images.md](09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
 
 ## How agents should read them
 

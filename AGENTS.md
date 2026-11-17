@@ -31,6 +31,7 @@
 7. **STOP INSTEAD OF GUESSING.** If the allowlisted tools cannot do it, **stop and ask the user**. Do not invent a workaround, a custom component, or a new dependency.
 8. **NO SIGNATURES OR TRAILERS.** Never append signatures, attributions, or trailers (such as `Co-Authored-By:`, AI labels, or bot tags) to code, comments, commit messages, PR descriptions, or any generated output. Write everything as if directly by a human developer — clean code, clean commit messages, clean descriptions only.
 9. **SITE ESSENTIALS REQUIRED.** Every website/app build must ship with the five essentials: **favicon, privacy policy, terms & conditions, sitemap, share preview (OG metadata)**. See [`rules/08-site-essentials.md`](rules/08-site-essentials.md).
+10. **REAL IMAGES ONLY.** Use real images from **Unsplash** (https://unsplash.com) and **Pinterest** (https://www.pinterest.com) — never AI-generated images and never fabricated image URLs, unless the user explicitly asks for generated imagery. See [`rules/09-real-images.md`](rules/09-real-images.md).
 
 ---
 
@@ -44,6 +45,7 @@
 | Banned patterns & anti-examples | **Forbidden list** | [`rules/05-forbidden-patterns.md`](rules/05-forbidden-patterns.md) |
 | Step-by-step workflow & self-check | **Checklist** | [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) |
 | Favicon, privacy, terms, sitemap, share preview | **Site essentials** | [`rules/08-site-essentials.md`](rules/08-site-essentials.md) |
+| Real imagery for hero/product/background/avatar slots | **Real images** — Unsplash + Pinterest | [`rules/09-real-images.md`](rules/09-real-images.md) |
 
 ---
 
@@ -116,9 +118,10 @@ If no allowlisted tool covers the request:
 | [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) | Before / during / after checklist |
 | [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md) | How to add the next rule, step by step |
 | [`rules/08-site-essentials.md`](rules/08-site-essentials.md) | Required site essentials: favicon, privacy, terms, sitemap, share preview |
+| [`rules/09-real-images.md`](rules/09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
 
 **Compatibility shims** (same rules, other agent formats): [`CLAUDE.md`](CLAUDE.md) · [`.github/copilot-instructions.md`](.github/copilot-instructions.md) · [`.cursor/rules/`](.cursor/rules/)
 
 ---
 
-*Version: 1.2 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
+*Version: 1.3 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only).*

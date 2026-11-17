@@ -30,6 +30,7 @@ rules/
   06-workflow-checklist.md         ← before/during/after checklist + response template
   07-how-to-add-a-rule.md          ← template + steps for adding the next rule
   08-site-essentials.md            ← required site essentials: favicon, privacy, terms, sitemap, share preview
+  09-real-images.md                ← real images only — Unsplash & Pinterest, never AI-generated
 ```
 
 ## How to use these rules
@@ -63,4 +64,4 @@ See [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md). In short:
 
 ---
 
-*Version 1.2 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
+*Version 1.3 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only).*

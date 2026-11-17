@@ -31,6 +31,7 @@
 - [ ] If blocked: showed empty search results and asked the user — did not invent.
 - [ ] Commit message is clean: no `Co-Authored-By`, AI labels, or bot tags.
 - [ ] All five site essentials present per [08-site-essentials.md](08-site-essentials.md): favicon · privacy · terms · sitemap · share preview.
+- [ ] All images are real (Unsplash/Pinterest per [09-real-images.md](09-real-images.md)), URLs verified (HTTP 200, correct dimensions), alt text present — no AI-generated images.
 
 ## Quick Commands Reference
 
