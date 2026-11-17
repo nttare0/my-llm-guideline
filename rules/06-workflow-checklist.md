@@ -19,6 +19,7 @@
 - [ ] Did not mix Astryx + shadcn on the same screen.
 - [ ] Accessibility: labels, alt text, keyboard operability, focus management.
 - [ ] No invented component, prop, CLI command, package, or file path.
+- [ ] No signatures, attributions, or trailers in code, comments, or commit messages.
 
 ## After (verify & report)
 
@@ -28,6 +29,7 @@
 - [ ] Response states: tools used + discovery commands + citations.
 - [ ] Response includes the one-line **Decision Log** (see [04](04-decision-tree.md)).
 - [ ] If blocked: showed empty search results and asked the user — did not invent.
+- [ ] Commit message is clean: no `Co-Authored-By`, AI labels, or bot tags.
 
 ## Quick Commands Reference
 

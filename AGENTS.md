@@ -29,6 +29,7 @@
 5. **ONE COMPONENT SYSTEM PER SCREEN.** Never mix Astryx and shadcn components on the same page/screen. Pick one per project (see [`rules/04-decision-tree.md`](rules/04-decision-tree.md)). Mixing requires explicit user approval.
 6. **MODERN PLATFORM FIRST.** Before writing any CSS/JS for layout, animation, forms, overlays, or performance, check Modern Web Guidance. Prefer native platform APIs over JS libraries/polyfills.
 7. **STOP INSTEAD OF GUESSING.** If the allowlisted tools cannot do it, **stop and ask the user**. Do not invent a workaround, a custom component, or a new dependency.
+8. **NO SIGNATURES OR TRAILERS.** Never append signatures, attributions, or trailers (such as `Co-Authored-By:`, AI labels, or bot tags) to code, comments, commit messages, PR descriptions, or any generated output. Write everything as if directly by a human developer — clean code, clean commit messages, clean descriptions only.
 
 ---
 
@@ -82,6 +83,7 @@ Every response that writes code **must**:
 2. Cite the discovery output you based the code on (CLI command + result, or docs URL).
 3. List any new dependency you installed — it must be from the allowlist or the project's existing deps. If you installed anything else, you violated these rules.
 4. Run the project's self-check in [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) before finishing.
+5. Keep every artifact clean — no signatures, attributions, or trailers (such as `Co-Authored-By:`, AI labels, or bot tags) in code, comments, commit messages, or PR descriptions. Write as if directly by a human developer. See [`rules/05-forbidden-patterns.md`](rules/05-forbidden-patterns.md) §7.
 
 **Example of a compliant opening line:**
 > Using Astryx `Button` (via `astryx component Button`) + Modern Web Guidance `popover` guide (via `retrieve`) for the overlay behaviour.
@@ -116,4 +118,4 @@ If no allowlisted tool covers the request:
 
 ---
 
-*Version: 1.0 — 2026-11-16 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
+*Version: 1.1 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*

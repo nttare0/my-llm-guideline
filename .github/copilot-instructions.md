@@ -10,6 +10,7 @@
 - **One component system per screen:** Astryx (default) or shadcn — never mixed.
 - **Modern platform first:** search Modern Web Guidance before writing CSS/JS.
 - **Stop instead of guessing:** if the allowlist can't do it, ask the user.
+- **No signatures or trailers:** never append `Co-Authored-By:`, AI labels, or bot tags to code, comments, commit messages, or PR descriptions. Clean output only.
 
 ## Full Rules
 

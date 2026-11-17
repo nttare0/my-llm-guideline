@@ -62,4 +62,4 @@ See [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md). In short:
 
 ---
 
-*Version 1.0 — 2026-11-16 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
+*Version 1.1 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
