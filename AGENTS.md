@@ -34,6 +34,7 @@
 10. **REAL IMAGES ONLY.** Use real images from **Unsplash** (https://unsplash.com) and **Pinterest** (https://www.pinterest.com) — never AI-generated images and never fabricated image URLs, unless the user explicitly asks for generated imagery. See [`rules/09-real-images.md`](rules/09-real-images.md).
 11. **PLUGINS BEFORE BUILD.** Before any build / vibe-coding session, verify **Ponytail** (https://github.com/DietrichGebert/ponytail) and **Agent Skills** (https://github.com/addyosmani/agent-skills) are installed. If missing, give install commands and wait — never start silently. See [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md).
 12. **SECURITY GATE REQUIRED.** Before shipping, pass all 32 security checks in [`rules/11-security-checklist.md`](rules/11-security-checklist.md): security headers, race conditions, `.git` exposure, account pre-hijacking, storage RLS, subdomain takeover, server-side prices, SSRF, credential stuffing, path traversal, open database, reset poisoning, no polyfill.io, no prod source maps, SMS pumping, clickjacking, prompt injection, open redirects, JWT secrets, user enumeration — plus XSS, SQL injection, CSRF, IDOR/broken access control, mass assignment, CORS, session management, dependency supply chain, secrets in git history, verbose errors/debug routes, unauthenticated admin/cron/webhook endpoints, and DoS on expensive endpoints.
+13. **LAUNCH CHECKLIST REQUIRED.** Before launch, pass all 20 website essentials in [`rules/12-launch-checklist.md`](rules/12-launch-checklist.md): custom 404, unique meta title & description per page, CTA above the fold, mobile breakpoints, sticky mobile CTA, loading states, form error states, thank-you page, cookie banner, analytics setup, real contact info, compressed images — plus the favicon set, robots.txt, sitemap, OG image, privacy, terms, and alt text already enforced by rules 02/08/09.
 
 ---
 
@@ -50,6 +51,7 @@
 | Real imagery for hero/product/background/avatar slots | **Real images** — Unsplash + Pinterest | [`rules/09-real-images.md`](rules/09-real-images.md) |
 | Session gate: Ponytail + Agent Skills installed pre-build | **Pre-build plugins** | [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md) |
 | Security: headers, RLS, SSRF, redirects, 32-check ship gate | **Security checklist** | [`rules/11-security-checklist.md`](rules/11-security-checklist.md) |
+| Launch gate: 20 website essentials (404, meta, CTA, cookie banner…) | **Launch checklist** | [`rules/12-launch-checklist.md`](rules/12-launch-checklist.md) |
 
 ---
 
@@ -125,9 +127,10 @@ If no allowlisted tool covers the request:
 | [`rules/09-real-images.md`](rules/09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
 | [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md) | Pre-build plugins: Ponytail + Agent Skills install gate |
 | [`rules/11-security-checklist.md`](rules/11-security-checklist.md) | Security checklist: 32 checks required before shipping |
+| [`rules/12-launch-checklist.md`](rules/12-launch-checklist.md) | Launch checklist: 20 website essentials required before launch |
 
 **Compatibility shims** (same rules, other agent formats): [`CLAUDE.md`](CLAUDE.md) · [`.github/copilot-instructions.md`](.github/copilot-instructions.md) · [`.cursor/rules/`](.cursor/rules/)
 
 ---
 
-*Version: 1.6 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only) · Plugins: Ponytail, Agent Skills · Security: 32-check ship gate.*
+*Version: 1.7 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only) · Plugins: Ponytail, Agent Skills · Gates: security (32) + launch (20).*

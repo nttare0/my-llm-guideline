@@ -15,6 +15,7 @@
 - **Real images only:** use real images from Unsplash and Pinterest — never AI-generated, never fabricated URLs — see [rules/09-real-images.md](rules/09-real-images.md).
 - **Plugins before build:** verify Ponytail and Agent Skills are installed before any build session; if missing, give install commands and wait — see [rules/10-prebuild-plugins.md](rules/10-prebuild-plugins.md).
 - **Security gate:** pass all 32 checks in [rules/11-security-checklist.md](rules/11-security-checklist.md) before shipping — headers, race conditions, `.git` exposure, RLS, server-side prices, SSRF, redirects, JWT strength, no user enumeration, XSS, SQL injection, CSRF, IDOR, CORS, sessions, supply chain, etc.
+- **Launch gate:** pass all 20 website essentials in [rules/12-launch-checklist.md](rules/12-launch-checklist.md) before launch — custom 404, unique meta titles/descriptions, hero CTA, mobile breakpoints, sticky mobile CTA, loading/error states, thank-you page, cookie banner, analytics, real contact info, compressed images, plus the rule 08/09 items.
 
 ## Full Rules
 

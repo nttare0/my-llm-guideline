@@ -27,6 +27,7 @@
 - [ ] Ran `legacy-scan` (or equivalent check) if refactoring existing code.
 - [ ] Ran the agent-skills `review` (`/review`) + `test` (`/test`) workflow where applicable.
 - [ ] Passed the 32-check security gate per [11-security-checklist.md](11-security-checklist.md) (headers, .git 404, RLS, server-side prices, rate limits, redirects, no prod maps, XSS, SQLi, CSRF, IDOR, CORS, sessions, supply chain, secrets history, admin/cron auth…).
+- [ ] Passed the 20-point launch gate per [12-launch-checklist.md](12-launch-checklist.md) (custom 404, unique meta titles/descriptions, hero CTA, breakpoints, sticky mobile CTA, loading/error states, thank-you page, cookie banner, analytics, real contact info, compressed images…).
 - [ ] Searched the diff: every new import is allowlisted or pre-existing.
 - [ ] Typecheck / lint / build passes (project's own commands).
 - [ ] Response states: tools used + discovery commands + citations.

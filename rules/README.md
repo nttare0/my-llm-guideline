@@ -20,6 +20,7 @@ rewriting the whole guideline.
 | 09 | [09-real-images.md](09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
 | 10 | [10-prebuild-plugins.md](10-prebuild-plugins.md) | Pre-build plugins: Ponytail + Agent Skills — install gate before any build session |
 | 11 | [11-security-checklist.md](11-security-checklist.md) | Security gate: 32 checks (headers, races, RLS, SSRF, XSS, CSRF, IDOR, CORS…) before shipping |
+| 12 | [12-launch-checklist.md](12-launch-checklist.md) | Launch gate: 20 website essentials (404, meta titles, CTAs, loading/error states, cookie banner, analytics…) |
 
 ## How agents should read them
 
