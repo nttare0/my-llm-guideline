@@ -30,6 +30,7 @@
 6. **MODERN PLATFORM FIRST.** Before writing any CSS/JS for layout, animation, forms, overlays, or performance, check Modern Web Guidance. Prefer native platform APIs over JS libraries/polyfills.
 7. **STOP INSTEAD OF GUESSING.** If the allowlisted tools cannot do it, **stop and ask the user**. Do not invent a workaround, a custom component, or a new dependency.
 8. **NO SIGNATURES OR TRAILERS.** Never append signatures, attributions, or trailers (such as `Co-Authored-By:`, AI labels, or bot tags) to code, comments, commit messages, PR descriptions, or any generated output. Write everything as if directly by a human developer — clean code, clean commit messages, clean descriptions only.
+9. **SITE ESSENTIALS REQUIRED.** Every website/app build must ship with the five essentials: **favicon, privacy policy, terms & conditions, sitemap, share preview (OG metadata)**. See [`rules/08-site-essentials.md`](rules/08-site-essentials.md).
 
 ---
 
@@ -42,6 +43,7 @@
 | Which tool to pick for a given task | **Decision tree** | [`rules/04-decision-tree.md`](rules/04-decision-tree.md) |
 | Banned patterns & anti-examples | **Forbidden list** | [`rules/05-forbidden-patterns.md`](rules/05-forbidden-patterns.md) |
 | Step-by-step workflow & self-check | **Checklist** | [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) |
+| Favicon, privacy, terms, sitemap, share preview | **Site essentials** | [`rules/08-site-essentials.md`](rules/08-site-essentials.md) |
 
 ---
 
@@ -113,9 +115,10 @@ If no allowlisted tool covers the request:
 | [`rules/05-forbidden-patterns.md`](rules/05-forbidden-patterns.md) | Banned patterns with before/after |
 | [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) | Before / during / after checklist |
 | [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md) | How to add the next rule, step by step |
+| [`rules/08-site-essentials.md`](rules/08-site-essentials.md) | Required site essentials: favicon, privacy, terms, sitemap, share preview |
 
 **Compatibility shims** (same rules, other agent formats): [`CLAUDE.md`](CLAUDE.md) · [`.github/copilot-instructions.md`](.github/copilot-instructions.md) · [`.cursor/rules/`](.cursor/rules/)
 
 ---
 
-*Version: 1.1 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*
+*Version: 1.2 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only.*

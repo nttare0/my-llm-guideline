@@ -30,6 +30,7 @@
 - [ ] Response includes the one-line **Decision Log** (see [04](04-decision-tree.md)).
 - [ ] If blocked: showed empty search results and asked the user — did not invent.
 - [ ] Commit message is clean: no `Co-Authored-By`, AI labels, or bot tags.
+- [ ] All five site essentials present per [08-site-essentials.md](08-site-essentials.md): favicon · privacy · terms · sitemap · share preview.
 
 ## Quick Commands Reference
 
