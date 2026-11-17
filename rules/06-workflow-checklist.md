@@ -5,6 +5,7 @@
 
 ## Before (discover)
 
+- [ ] Verified both pre-build plugins are installed per [10-prebuild-plugins.md](10-prebuild-plugins.md): Ponytail · Agent Skills (if missing, give install commands and wait).
 - [ ] Read [`AGENTS.md`](../AGENTS.md) + relevant `rules/*.md`.
 - [ ] Identified the project state: Astryx project / shadcn project / new project.
 - [ ] Ran **Modern Web Guidance** `search` (+ `retrieve` if needed) for the platform concern.
@@ -24,6 +25,7 @@
 ## After (verify & report)
 
 - [ ] Ran `legacy-scan` (or equivalent check) if refactoring existing code.
+- [ ] Ran the agent-skills `review` (`/review`) + `test` (`/test`) workflow where applicable.
 - [ ] Searched the diff: every new import is allowlisted or pre-existing.
 - [ ] Typecheck / lint / build passes (project's own commands).
 - [ ] Response states: tools used + discovery commands + citations.

@@ -13,6 +13,7 @@
 - **No signatures or trailers:** never append `Co-Authored-By:`, AI labels, or bot tags to code, comments, commit messages, or PR descriptions. Clean output only.
 - **Site essentials:** every build ships favicon, privacy policy, terms & conditions, sitemap, and share preview (OG metadata) — see [rules/08-site-essentials.md](rules/08-site-essentials.md).
 - **Real images only:** use real images from Unsplash and Pinterest — never AI-generated, never fabricated URLs — see [rules/09-real-images.md](rules/09-real-images.md).
+- **Plugins before build:** verify Ponytail and Agent Skills are installed before any build session; if missing, give install commands and wait — see [rules/10-prebuild-plugins.md](rules/10-prebuild-plugins.md).
 
 ## Full Rules
 

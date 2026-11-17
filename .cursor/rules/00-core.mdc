@@ -29,6 +29,7 @@ alwaysApply: true
 8. NO SIGNATURES OR TRAILERS — never append Co-Authored-By, AI labels, or bot tags to code, comments, commit messages, or PR descriptions. Clean output only, as if written directly by a human developer.
 9. SITE ESSENTIALS — every build ships favicon, privacy policy, terms & conditions, sitemap, and share preview (OG metadata). See `rules/08-site-essentials.md`.
 10. REAL IMAGES ONLY — use real images from Unsplash (https://unsplash.com) and Pinterest (https://www.pinterest.com). Never AI-generated images, never fabricated URLs. See `rules/09-real-images.md`.
+11. PLUGINS BEFORE BUILD — verify Ponytail and Agent Skills are installed before any build session; if missing, give install commands and wait. See `rules/10-prebuild-plugins.md`.
 
 See `rules/01-astryx.md`, `rules/02-modern-web-guidance.md`, `rules/03-shadcn.md`,
 `rules/04-decision-tree.md`, `rules/05-forbidden-patterns.md`, `rules/06-workflow-checklist.md`.

@@ -32,6 +32,7 @@
 8. **NO SIGNATURES OR TRAILERS.** Never append signatures, attributions, or trailers (such as `Co-Authored-By:`, AI labels, or bot tags) to code, comments, commit messages, PR descriptions, or any generated output. Write everything as if directly by a human developer — clean code, clean commit messages, clean descriptions only.
 9. **SITE ESSENTIALS REQUIRED.** Every website/app build must ship with the five essentials: **favicon, privacy policy, terms & conditions, sitemap, share preview (OG metadata)**. See [`rules/08-site-essentials.md`](rules/08-site-essentials.md).
 10. **REAL IMAGES ONLY.** Use real images from **Unsplash** (https://unsplash.com) and **Pinterest** (https://www.pinterest.com) — never AI-generated images and never fabricated image URLs, unless the user explicitly asks for generated imagery. See [`rules/09-real-images.md`](rules/09-real-images.md).
+11. **PLUGINS BEFORE BUILD.** Before any build / vibe-coding session, verify **Ponytail** (https://github.com/DietrichGebert/ponytail) and **Agent Skills** (https://github.com/addyosmani/agent-skills) are installed. If missing, give install commands and wait — never start silently. See [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md).
 
 ---
 
@@ -46,6 +47,7 @@
 | Step-by-step workflow & self-check | **Checklist** | [`rules/06-workflow-checklist.md`](rules/06-workflow-checklist.md) |
 | Favicon, privacy, terms, sitemap, share preview | **Site essentials** | [`rules/08-site-essentials.md`](rules/08-site-essentials.md) |
 | Real imagery for hero/product/background/avatar slots | **Real images** — Unsplash + Pinterest | [`rules/09-real-images.md`](rules/09-real-images.md) |
+| Session gate: Ponytail + Agent Skills installed pre-build | **Pre-build plugins** | [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md) |
 
 ---
 
@@ -119,9 +121,10 @@ If no allowlisted tool covers the request:
 | [`rules/07-how-to-add-a-rule.md`](rules/07-how-to-add-a-rule.md) | How to add the next rule, step by step |
 | [`rules/08-site-essentials.md`](rules/08-site-essentials.md) | Required site essentials: favicon, privacy, terms, sitemap, share preview |
 | [`rules/09-real-images.md`](rules/09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
+| [`rules/10-prebuild-plugins.md`](rules/10-prebuild-plugins.md) | Pre-build plugins: Ponytail + Agent Skills install gate |
 
 **Compatibility shims** (same rules, other agent formats): [`CLAUDE.md`](CLAUDE.md) · [`.github/copilot-instructions.md`](.github/copilot-instructions.md) · [`.cursor/rules/`](.cursor/rules/)
 
 ---
 
-*Version: 1.3 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only).*
+*Version: 1.4 — 2026-11-17 · Allowlist: Astryx, Modern Web Guidance, shadcn/ui only · Images: Unsplash, Pinterest (real photos only) · Plugins: Ponytail, Agent Skills.*
