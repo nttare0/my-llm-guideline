@@ -19,7 +19,7 @@ rewriting the whole guideline.
 | 08 | [08-site-essentials.md](08-site-essentials.md) | Site essentials: favicon, privacy, terms, sitemap, share preview |
 | 09 | [09-real-images.md](09-real-images.md) | Real images only — Unsplash & Pinterest, never AI-generated |
 | 10 | [10-prebuild-plugins.md](10-prebuild-plugins.md) | Pre-build plugins: Ponytail + Agent Skills — install gate before any build session |
-| 11 | [11-security-checklist.md](11-security-checklist.md) | Security gate: 20 checks (headers, races, RLS, SSRF, redirects…) before shipping |
+| 11 | [11-security-checklist.md](11-security-checklist.md) | Security gate: 32 checks (headers, races, RLS, SSRF, XSS, CSRF, IDOR, CORS…) before shipping |
 
 ## How agents should read them
 

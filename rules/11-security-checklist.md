@@ -1,4 +1,4 @@
-# 11 — Security Checklist (20 Checks Before Any Build Ships)
+# 11 — Security Checklist (32 Checks Before Any Build Ships)
 
 > Every build passes this security gate. Each check: what it is → what the
 > agent **must do**. A build that fails any check is not done (see
@@ -12,9 +12,11 @@ Before shipping, verify at minimum: security headers present in production
 response · `/.git/config` returns 404 · no `.map` files in prod bundle ·
 DB not exposed (RLS on, service keys server-side) · prices recalculated
 server-side · rate limits on auth/OTP · redirects allowlisted · reset links
-from configured base URL · no third-party polyfill CDN.
+from configured base URL · no third-party polyfill CDN · ownership checked
+server-side on every object access (IDOR) · CORS allowlist · npm audit clean ·
+no secrets in git history · no unauthenticated admin/cron/webhook routes.
 
-## The 20 Checks
+## The 32 Checks
 
 ### 1. Next.js security headers
 Send on every response: `Strict-Transport-Security`, `Content-Security-Policy`,
@@ -132,6 +134,77 @@ accounts (login, reset, signup). Constant-time comparisons for tokens/hashes;
 rate limits make timing probing impractical; signup messages don't confirm
 "email already registered" to unauthenticated callers.
 
+### 21. XSS (cross-site scripting)
+Escape all user content by default. Never inject user input via
+`dangerouslySetInnerHTML`/`innerHTML`; sanitize rich text/markdown/HTML with a
+vetted sanitizer before rendering; block `javascript:` URLs; CSP is the
+backstop, not the fix.
+
+### 22. SQL injection
+Parameterized queries only — never string-concatenate SQL. Supabase: use the
+query builder / parameterized `rpc`; if raw SQL is unavoidable, bind
+parameters. Dynamic order/filter columns come from a server-side allowlist,
+not the client.
+
+### 23. CSRF
+Cookie-authenticated state-changing endpoints need CSRF defence:
+`SameSite=Lax/Strict` cookies, CSRF tokens, and Origin/Referer validation
+server-side. Next.js Server Actions have built-in Origin checks — keep them,
+never bypass.
+
+### 24. IDOR / broken access control
+Authorization on **every** object access, server-side. Logged-in ≠ allowed:
+every query filters by the authenticated user's ownership or explicit role;
+IDs come from the session, not the client. Test by fetching another user's
+object and confirming denial. Supabase RLS is the enforcement layer — still
+verify in code.
+
+### 25. Mass assignment
+Never spread a request body into a DB write (`update(req.body)`). Whitelist
+assignable fields per endpoint; privileged fields (`role`, `is_admin`,
+`plan`, `owner_id`) are never client-settable; strip unknown keys from
+signup/profile payloads.
+
+### 26. CORS misconfiguration
+Never reflect an arbitrary `Origin` together with
+`Access-Control-Allow-Credentials: true`, and never `*` + credentials. Strict
+origin allowlist, `Vary: Origin`, explicit preflight handling. Only open
+what is genuinely cross-origin.
+
+### 27. Session management
+Cookies: `HttpOnly`, `Secure`, `SameSite`, scoped `Path`/`Domain`. Logout and
+password change invalidate the session **server-side** (not just client-side
+cookie deletion); rotate sessions on privilege change; sane expiry; never
+session tokens in URLs.
+
+### 28. Dependency & supply chain
+Lockfile committed; `npm audit` clean of high/critical before ship; versions
+pinned; packages only from the allowlist ([05](05-forbidden-patterns.md)) —
+no typosquats, no unvetted installs; verify package names character by
+character; automation (Dependabot/Renovate) watches CVEs.
+
+### 29. Secrets in code & git history
+Secrets never enter the repo — not even once. Pre-commit secret scanning
+(e.g. gitleaks); if a secret ever touched history: **rotate immediately**,
+then purge/rewrite history. Scan env files, dumps, and test fixtures too.
+
+### 30. Verbose errors & debug routes
+No stack traces, SQL, or internal paths in client-facing errors — generic
+messages plus server-side structured logs. No debug/test/admin routes in
+production deployments; error boundaries leak nothing.
+
+### 31. Unauthenticated admin, cron & webhook endpoints
+Every server action, API route, cron route, and webhook authenticates or
+verifies a secret (constant-time comparison) — Next.js routes are public HTTP
+endpoints by default. Admin UIs check roles server-side, not just hide links.
+Webhooks verify provider signatures before processing.
+
+### 32. DoS on expensive endpoints
+Rate-limit and size-cap uploads, search, exports, image optimization, and
+list endpoints; enforce pagination limits and query timeouts; expensive work
+runs queued/background, not request-blocking. Disable or restrict unused
+optimizers (e.g. `/_next/image`).
+
 ## Forbidden
 
 - ❌ Shipping without running the security gate above.
@@ -140,9 +213,16 @@ rate limits make timing probing impractical; signup messages don't confirm
 - ❌ `X-Powered-By` on, prod source maps, or `.git` in deploy output.
 - ❌ Uncontrolled third-party script/polyfill CDNs.
 - ❌ Invented config keys — verify header/RLS/config syntax in docs first.
+- ❌ Reflecting arbitrary origins with credentials, or `*` + credentials (CORS).
+- ❌ Spreading raw request bodies into DB writes (mass assignment).
+- ❌ A secret ever committed — if one touched history: rotate immediately.
+- ❌ Unauthenticated cron/webhook/admin endpoints in production.
+- ❌ Stack traces, debug routes, or internal details in client-facing errors.
 
 ## Report in your response
 
 > Security gate: headers ✅ (HSTS, CSP, nosniff, no X-Powered-By) · .git 404 ✅ ·
 > RLS on all tables ✅ · prices server-side ✅ · auth rate-limits ✅ ·
-> redirects allowlisted ✅ · reset base URL config ✅ · no prod maps ✅.
+> redirects allowlisted ✅ · reset base URL config ✅ · no prod maps ✅ ·
+> IDOR ownership checks ✅ · CORS allowlist ✅ · npm audit clean ✅ ·
+> no secrets in history ✅ · no unauthenticated admin/cron routes ✅.

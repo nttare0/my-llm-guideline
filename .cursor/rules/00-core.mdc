@@ -30,7 +30,7 @@ alwaysApply: true
 9. SITE ESSENTIALS — every build ships favicon, privacy policy, terms & conditions, sitemap, and share preview (OG metadata). See `rules/08-site-essentials.md`.
 10. REAL IMAGES ONLY — use real images from Unsplash (https://unsplash.com) and Pinterest (https://www.pinterest.com). Never AI-generated images, never fabricated URLs. See `rules/09-real-images.md`.
 11. PLUGINS BEFORE BUILD — verify Ponytail and Agent Skills are installed before any build session; if missing, give install commands and wait. See `rules/10-prebuild-plugins.md`.
-12. SECURITY GATE — pass all 20 checks in `rules/11-security-checklist.md` before shipping (headers, .git 404, RLS, server-side prices, SSRF, redirects, no prod maps, JWT strength, no user enumeration…).
+12. SECURITY GATE — pass all 32 checks in `rules/11-security-checklist.md` before shipping (headers, .git 404, RLS, server-side prices, SSRF, redirects, no prod maps, JWT strength, no user enumeration, XSS, SQLi, CSRF, IDOR, CORS, sessions, supply chain…).
 
 See `rules/01-astryx.md`, `rules/02-modern-web-guidance.md`, `rules/03-shadcn.md`,
 `rules/04-decision-tree.md`, `rules/05-forbidden-patterns.md`, `rules/06-workflow-checklist.md`.
