@@ -1,0 +1,31 @@
+---
+description: Core allowlist — only Astryx, Modern Web Guidance, shadcn/ui. No invented tools.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Core Allowlist (Cursor mirror of rules/00-core-allowlist.md)
+
+> Canonical source: `rules/00-core-allowlist.md` + `AGENTS.md`. This file is a
+> Cursor mirror — if they differ, the canonical files win.
+
+**Only these three tools may be used to build. Nothing else.**
+
+| # | Tool | Source | Discover before coding |
+|---|------|--------|------------------------|
+| 1 | Astryx | https://github.com/meta/astryx | `npx @astryxdesign/cli search <q>` · `component <Name>` · `docs <topic>` |
+| 2 | Modern Web Guidance | https://github.com/GoogleChrome/modern-web-guidance-src | `npx modern-web-guidance@latest search "<task>"` · `retrieve "<id>"` |
+| 3 | shadcn/ui | https://ui.shadcn.com | `npx shadcn@latest search <q>` · `npx shadcn@latest add <component>` |
+
+## Hard constraints
+
+1. NO INVENTED TOOLS — never fabricate a component, prop, hook, token, CLI command, package, or path.
+2. NO HAND-ROLLED REPLACEMENTS — never write your own Button/Dialog/Modal/Toast/etc.
+3. NO NEW LIBRARIES — no MUI/Chakra/Ant/Bootstrap/etc. Only allowlist + existing project deps.
+4. VERIFY BEFORE YOU WRITE — run discovery CLI first, cite output.
+5. ONE COMPONENT SYSTEM PER SCREEN — Astryx (default) or shadcn, never mixed without approval.
+6. MODERN PLATFORM FIRST — check Modern Web Guidance before writing CSS/JS.
+7. STOP INSTEAD OF GUESSING — if allowlist can't do it, ask the user.
+
+See `rules/01-astryx.md`, `rules/02-modern-web-guidance.md`, `rules/03-shadcn.md`,
+`rules/04-decision-tree.md`, `rules/05-forbidden-patterns.md`, `rules/06-workflow-checklist.md`.
